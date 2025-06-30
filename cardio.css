@@ -178,6 +178,7 @@ body {
   flex: 1 1 250px;
   max-width: 250px;
   border-right: 1px solid #ddd;
+  padding-top: 50px;
 }
 .filters {
   flex: 1 1 250px;
