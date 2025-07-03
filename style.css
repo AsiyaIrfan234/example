@@ -1393,6 +1393,13 @@ transform: scale(1.1) rotate(2deg);
 }
 
 
+/* issy wastapp icon fixed hota h  */
+.whats{
+    width: 12%;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}
 
 
 
