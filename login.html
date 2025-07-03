@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Life Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .login-wrapper {
+      display: flex;
+      width: 100%;
+    }
+
+    .login-left {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .login-left img.logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .login-left h2 {
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .login-left form {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .login-left input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .login-left button {
+      width: 100%;
+      padding: 12px;
+      background-color: #d61f1f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-left button:hover {
+      background-color: #aa1717;
+    }
+
+    .login-left p {
+      margin-top: 15px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .login-left p a {
+      color: #d61f1f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-right {
+      flex: 1;
+      background: url('https://shop.lifefitness.com/cdn/shop/files/club-series-treadmill-update-lifestyle-1-1000x1000_f69c3280-1dc7-44c6-b4c5-b12c469cd599.jpg?v=1709238005&width=1200') no-repeat center center;
+      background-size: cover;
+    }
+
+    @media (max-width: 768px) {
+      .login-wrapper {
+        flex-direction: column;
+      }
+
+      .login-right {
+        height: 250px;
+      }
+    }
+
+    /* animation-strt */
+    .login-right {
+  flex: 1;
+  background: url('https://shop.lifefitness.com/cdn/shop/files/club-series-treadmill-update-lifestyle-1-1000x1000_f69c3280-1dc7-44c6-b4c5-b12c469cd599.jpg?v=1709238005&width=1200') no-repeat center center;
+  background-size: cover;
+  animation: premiumMotion 18s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes premiumMotion {
+  0% {
+    transform: scale(1) rotate(0deg) translateX(0px);
+  }
+  50% {
+    transform: scale(1.07) rotate(0.7deg) translateX(-20px);
+  }
+  100% {
+    transform: scale(1) rotate(0deg) translateX(0px);
+  }
+}
+/* animation-end */
+
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <!-- Left: Login Form -->
+    <div class="login-left">
+      <img src="https://cdn.shopify.com/s/files/1/0538/8307/6805/files/LFHS_Product_Hammer_Red_Black_2024_RGB_AW_500PX_200x60@2x.png?v=1731622471.webp" class="logo" alt="Logo" />
+      <h2>Login to Your Account</h2>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </form>
+    </div>
+
+    <!-- Right: Background Image -->
+    <div class="login-right">
+        <img src="" alt="">
+    </div>
+  </div>
+
+
+</body>
+</html>
