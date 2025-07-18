@@ -195,8 +195,8 @@ body {
 }
 
 .cardio-image img {
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 80;
   display: block;
   object-fit: cover;
 }
@@ -313,9 +313,7 @@ body {
   top: 110px; /* Adjust this if you have a fixed header/navbar */
   height: fit-content; /* Ensure it doesn’t stretch */
 }
-.breadcrumb {
-    padding: 30px;
-}
+
 .breadcrumb >a {
   font-size: 14px;
   color: #888;
@@ -329,8 +327,7 @@ body {
 }
 
 .filter-group {
-  margin-bottom: 40px;
-  margin-top: 30px;
+  margin-bottom: 24px;
 }
 
 .filter-group h4 {
