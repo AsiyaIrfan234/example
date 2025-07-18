@@ -1,495 +1,326 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LifeFitness Clone</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Links (ye sirf <head> me lagani hain) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<!-- CDN link (head me hona chahiye) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<!-- Head section me link (agar pehle se nahi diya): -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="top">
-<!-- Top Red Strip -->
- <button class="nav-toggler" onclick="document.querySelector('.nav-right').classList.toggle('show')">
-    <i class="fas fa-bars"></i>
-  </button>
-<div class="top-strip">
-  <span> BUILD YOUR DREAM HOME GYM </span>
-    <nav class="nav-tabs"> 
-      <a href="login.html" class="active">LOGIN</a>
-      <a href="signup.html">SIGN UP</a>
-    </nav>
-</div>
+<body>
 
-<!-- Navbar -->
-<header class="navbar">
-  <div class="nav-left">
-    <img src="https://static.vecteezy.com/system/resources/previews/013/146/831/non_2x/body-builder-lifting-a-dumbbell-png.png" style="height: 60px;" alt="">
-    <a href="index.html">
-    <img src="https://shop.lifefitness.com/cdn/shop/t/133/assets/lifefitness-hammerstrength-home-logo.svg?v=18793527972402210681750339380" alt="Logo" class="logo" />
-    </a>
-  </div>
-<!--  -->
-  
-  <!--  -->
-  <div class="nav-right">
-    <a href="cardio.html">CARDIO</a>
-    <a href="strength.html">STRENGTH</a>
-    <a href="ACCESSORIES.html">ACCESSORIES</a>
-    <a href="OUTLET.html">OUTLET</a>
-    <a href="TOOLS.html">TOOLS</a>
-   <span class="icons">
-  <i class="fas fa-search"></i>
-  <i class="fas fa-user"></i>
-  <i class="fas fa-shopping-cart"></i>
-</span>
+    <div class="d-flex" id="wrapper">
 
-  </div>
-</header>
+        <!-- Sidebar -->
+        <nav id="sidebar" class="bg-dark text-white">
+            <div class="sidebar-header p-4">
+                <h4 class="mb-0">AdminPanel</h4>
+            </div>
+            <ul class="list-unstyled components px-2">
+                <li><a href="index.html" class="text-white d-block py-2 px-3"><i
+                            class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+                <li><a href="users.html" class="text-white d-block py-2 px-3"><i class="fas fa-user me-2"></i>Users</a>
+                </li>
+                <li><a href="setting.html" class="text-white d-block py-2 px-3"><i
+                            class="fas fa-cog me-2"></i>Settings</a></li>
+                <li><a href="reports.html" class="text-white d-block py-2 px-3"><i
+                            class="fas fa-chart-bar me-2"></i>Reports</a>
+                </li>
+                <li><a href="orders.html" class="text-white d-block py-2 px-3"><i
+                            class="fas fa-sign-out-alt me-2"></i>Orders</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="w-100">
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-image left animate__animated animate__fadeInLeft">
-  <img src="https://shop.lifefitness.com/cdn/shop/files/Symbio_Runner_Hero_Close-1000x1000.jpg?v=1748945185&width=1000" alt="Cardio Image">
-</div>
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg bg-white border-bottom px-4 sticky-top shadow-sm">
+                <div class="container-fluid">
+                    <!-- Left Nav Items -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                        <li class="nav-item"><a class="nav-link active fw-bold" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profile.html">Profiles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="myaccount.html">My Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="network.html">Network</a></li>
+                        <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                        <li class="nav-item"><a class="nav-link" href="auth.html">Authentication</a></li>
+                        <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                    </ul>
 
+                    <!-- Right Nav Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-muted"><i class="fas fa-search fa-lg"></i></a>
+                        <a href="#" class="text-muted position-relative">
+                            <i class="far fa-bell fa-lg"></i>
+                            <!-- <span
+                                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span> -->
+                        </a>
+                        <a href="logout.html" class="text-muted"><i class="far fa-comment-alt fa-lg"> <img
+                                    src="images/power-off.png" alt="" width="30px" height="30px"></i></a>
+                        <!-- <a href="#" class="text-muted"><i class="fas fa-th fa-lg"></i></a> -->
 
-    <div class="hero-content">
-   <h1 class="animate__animated animate__zoomIn animate__slow">
-    SUMMER<br>STARTS WITH<br>ENDURANCE
-  </h1>
-      <div class="hero-buttons">
-        <a href="cardio.html" class="btn">CARDIO</a>
-        <a href="strength.html" class="btn">STRENGTH</a>
-      </div>
-    </div>
->
-<div class="hero-image right animate__animated animate__fadeInRight animate__delay-1s">
-  <img src="https://shop.lifefitness.com/cdn/shop/files/Strength-PlateLoaded-Seated-Biceps-1_076f70ef-0b41-4720-bcd2-7c8c85d62fd8.jpg?v=1750341703&width=1200" alt="Strength Image">
-</div>
+                        <!-- Avatar with green ring -->
+                        <div class="avatar-ring">
+                            <img src="images/IMG_20250127_033214_418.webp" width="30px" height="30px" alt="User"
+                                class="rounded-circle" />
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
+            <!-- Dashboard Content -->
+            <div class="container-fluid py-4">
 
-  </section>
+                <h2 class="mb-4">Dashboard Overview</h2>
 
-  <!-- second section -->
-   <section class="product-section">
-  <h2>SHOP LIFE FITNESS CARDIO</h2>
-  <div class="product-grid">
+                <!-- KPI Cards -->
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card text-white bg-primary shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Users</h5>
+                                <p class="card-text fs-4">1,024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Sales</h5>
+                                <p class="card-text fs-4">$9,300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-warning shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Orders</h5>
+                                <p class="card-text fs-4">512</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-danger shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Errors</h5>
+                                <p class="card-text fs-4">7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Product 1 -->
-    <div class="product-card">
-  <img src="https://shop.lifefitness.com/cdn/shop/files/club-series-treadmill-life-fitness-sl-console-black-onyx-update-1000x1000.jpg?v=1748945413&width=400" alt="Treadmill">
-  
-      <h3>Club Series+ Treadmill</h3>
-      <p class="price">From $7,425.00</p>
-     <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-  <span>(27)</span>
-</div>
+                <!-- Highlights & Earnings -->
+                <div class="row mt-4">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Highlights</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="d-flex justify-content-between py-2 border-bottom">
+                                        <span><i class="fas fa-user-plus text-success me-2"></i>New Signups</span>
+                                        <span class="fw-semibold">124</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between py-2 border-bottom">
+                                        <span><i class="fas fa-shopping-cart text-primary me-2"></i>New Orders</span>
+                                        <span class="fw-semibold">58</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between py-2">
+                                        <span><i class="fas fa-comments text-warning me-2"></i>Feedback</span>
+                                        <span class="fw-semibold">23</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Earnings</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="text-muted">Today</span>
+                                    <span class="fw-bold text-success">$1,250</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="text-muted">This Week</span>
+                                    <span class="fw-bold text-primary">$8,540</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">This Month</span>
+                                    <span class="fw-bold text-dark">$34,290</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="colors">
-        <span class="color black"></span>
-        <span class="color grey"></span>
-      </div>
-    </div>
+                <!-- Team Meetings & Teams -->
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Team Meetings</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Design Sync <span class="badge bg-primary">10:00 AM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Dev Sprint Planning <span class="badge bg-success">2:00 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Client Review <span class="badge bg-warning text-dark">4:30 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Design Sync <span class="badge bg-primary">10:00 AM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Dev Sprint Planning <span class="badge bg-success">2:00 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Client Review <span class="badge bg-warning text-dark">4:30 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Design Sync <span class="badge bg-primary">10:00 AM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Dev Sprint Planning <span class="badge bg-success">2:00 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Client Review <span class="badge bg-warning text-dark">4:30 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Design Sync <span class="badge bg-primary">10:00 AM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Dev Sprint Planning <span class="badge bg-success">2:00 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Client Review <span class="badge bg-warning text-dark">4:30 PM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Design Sync <span class="badge bg-primary">10:00 AM</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Dev Sprint Planning <span class="badge bg-success">2:00 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
 
-    <!-- Product 2 -->
-    <div class="product-card">
-      <img src="https://shop.lifefitness.com/cdn/shop/files/club-series-elliptical-se4-black-1000x1000.jpg?v=1748945426&width=600" alt="Cross Trainer">
-      <h3>Club Series+ Elliptical Cross-Trainer</h3>
-      <p class="price">From $6,399.00</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i> <span>(24)</span>
-      </div>
-      <div class="colors">
-        <span class="color black"></span>
-        <span class="color grey"></span>
-      </div>
-    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-white border-bottom">
+                                <h5 class="mb-0">Teams</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <img src="images/happy-girl.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>Design Team</strong>
+                                            <p class="text-muted mb-0">4 Members</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <img src="images/girlimg.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>Development Team</strong>
+                                            <p class="text-muted mb-0">6 Members</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <img src="images/admin-img.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>QA Team</strong>
+                                            <p class="text-muted mb-0">3 Members</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <img src="images/happy-girl.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>Design Team</strong>
+                                            <p class="text-muted mb-0">4 Members</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <img src="images/girlimg.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>Development Team</strong>
+                                            <p class="text-muted mb-0">6 Members</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <img src="images/admin-img.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>QA Team</strong>
+                                            <p class="text-muted mb-0">3 Members</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <img src="images/happy-girl.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>Design Team</strong>
+                                            <p class="text-muted mb-0">4 Members</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <img src="images/girlimg.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>Development Team</strong>
+                                            <p class="text-muted mb-0">6 Members</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <img src="images/admin-img.jpg" class="rounded-circle me-3" alt="User"
+                                            width="30px" height="30px">
+                                        <div>
+                                            <strong>QA Team</strong>
+                                            <p class="text-muted mb-0">3 Members</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Product 3 -->
-    <div class="product-card">
-      <span class="tag blue">SPECIAL ORDER</span>
-      <img src="https://shop.lifefitness.com/cdn/shop/files/total-body-arc-black-SL-1000x1000.jpg?v=1748945397&width=400" alt="Arc Trainer">
-      <h3>Club Series+ Total Body Arc Trainer</h3>
-      <p class="price">From $9,999.00</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i> <span>(4)</span>
-      </div>
-      <div class="colors">
-        <span class="color black"></span>
-        <span class="color grey"></span>
-      </div>
-    </div>
-
-    <!-- Product 4 -->
-    <div class="product-card">
-      <span class="tag red">SAVE 50%<br>OUTLET</span>
-      <img src="https://shop.lifefitness.com/cdn/shop/files/elevation-treadmill-arctic-silver-se3hd-1000x1000.jpg?v=1748945250&width=400" alt="Outlet Treadmill">
-      <h3>Elevation Series Treadmill - Outlet</h3>
-      <p class="price red-price">$8,500.00 <del>$16,999.00</del></p>
-      <div class="colors">
-        <span class="color red"></span>
-        <span class="color grey"></span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- thired section -->
-
-<section class="symbio-section">
-  <div class="symbio-content">
-    <div class="symbio-image">
-      <img src="https://shop.lifefitness.com/cdn/shop/files/Symbio_Runner_Hero_Close-1000x1000.jpg?v=1748945185&width=1000" alt="Symbio Runner">
-    </div>
-    <div class="symbio-text">
-      <h2>S Y M B I O</h2>
-      <p>The Symbio Runner sets new standards in biomechanics and design, fusing body and machine in seamless motion with engaging personalization, advanced biomechanics and purposeful design.</p>
-      <p>Inspired by decades of research, the Symbio Runner offers customization and personalization to suit the individual needs and training goals of each runner, while elevating your home gym with aluminum casting, clean simple lines and a contemporary design.</p>
-      <a href="cardio.html" class="learn-btn">LEARN MORE</a>
-    </div>
-  </div>
-</section>
-<!-- forth section -->
-
-<section class="testimonial-section">
-  <h2>WHAT OUR CUSTOMERS SAY:</h2>
-  <div class="testimonial-wrapper">
-
-    <!-- Left Image -->
-    <div class="testimonial-image">
-      <img src="https://shop.lifefitness.com/cdn/shop/files/CS-customer-review-1.jpg?v=1741115658&width=1000" alt="Customer Gym">
-    </div>
-
-    <!-- Testimonial Box -->
-    <div class="testimonial-box">
-      <h3>CLUB SERIES+ TREADMILL</h3>
-      <p class="quote">
-        "Excellent quality and the Life Fitness warranty, service and delivery are the best."  
-        <span>- Verified Buyer</span>
-      </p>
-      <a href="cardio.html" class="shop-btn">SHOP NOW</a>
-    </div>
-
-    <!-- Right Ghost Slide -->
-    <div class="testimonial-fade">
-      <img src="https://shop.lifefitness.com/cdn/shop/files/HOME-customer-review-3.jpg?v=1741121533&width=1000" alt="Ghost Preview">
-  
-    </div>
-  </div>
-</section>
-
-<!-- fifth section  -->
-<section class="gym-design-section">
-  <div class="design-content-box">
-    <p class="tagline">COMPLIMENTARY</p>
-    <h2>CUSTOM HOME <br>GYM DESIGN</h2>
-    <p class="description">
-      From $10,000 efficient spaces, to $150,000 dream gyms,<br>
-      we can help you build the perfect fitness space for your home.
-    </p>
-    <a href="strength.html" class="learn-more-btn">LEARN MORE</a>
-  </div>
-</section>
-
-<!-- sixth section -->
- <section class="featured-section">
-  <h2>FEATURED IN</h2>
-  <div class="featured-logos">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/mens-health-logo.png?v=1619451225&width=125" alt="Men's Health">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/forbes-logo.png?v=1619451171&width=125" alt="Forbes">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/self-logo.png?v=1620313783&width=125" alt="SELF">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/gq-logo-sm.png?v=1620314059&width=125" alt="GQ">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/mens-journal-logo.png?v=1619451359&width=125" alt="Mens Journal">
-  </div>
-</section>
-
-<section class="full-img-left">
-  <img src="https://shop.lifefitness.com/cdn/shop/files/homepage-lifestyle-1.jpg?v=1695225574&width=2200" alt="gym">
-</section>
-
-<!-- seven section -->
- <section class="feature-section">
-  <h2 class="feature-heading">SHOP BY FEATURE</h2>
-  <div class="feature-container">
-    <div class="feature-image">
-      <img src="https://shop.lifefitness.com/cdn/shop/files/club-series-treadmill-update-lifestyle-1-1000x1000_f69c3280-1dc7-44c6-b4c5-b12c469cd599.jpg?v=1709238005&width=1000" alt="Apple Watch">
-    </div>
-    <div class="feature-content">
-      <h3>APPLE WATCH® COMPATIBLE</h3>
-      <p>Easily track how hard you're working with real-time feedback from your favorite devices.</p>
-      <a href="OUTLET.html" class="shop-btn">SHOP NOW</a>
-    </div>
-  </div>
-</section>
-
-<!-- eight section -->
-<section class="weight-room-section">
-  <p class="weight-subtitle">STRENGTH EQUIPMENT FOR SERIOUS STRENGTH ATHLETES</p>
-  <h2 class="weight-title">BUILD YOUR DREAM HOME WEIGHT ROOM</h2>
-
-  <div class="product-grid">
-    <!-- Product 1 -->
-    <div class="product-card">
-      <img src="https://shop.lifefitness.com/cdn/shop/products/life-fitness-dual-adjustable-pulley-charcoal-1000x1000.jpg?v=1748945335&width=500" alt="Product 1">
-      <h4>Signature Series Dual Adjustable Pulley</h4>
-      <p class="price">From $9,765.00</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <span>(4)</span></div>
-    </div>
-
-    <!-- Product 2 -->
-    <div class="product-card">
-      <img src="https://shop.lifefitness.com/cdn/shop/products/life-fitness-g7-home-gym-adjustable-bench-1000x1000.jpg?v=1748945422&width=500" alt="Product 2">
-      <h4>G7 Home Gym</h4>
-      <p class="price">$3,889.00</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <span>(55)</span></div>
-    </div>
-
-    <!-- Product 3 -->
-    <div class="product-card">
-      <img src="https://shop.lifefitness.com/cdn/shop/files/plate-loaded-linear-leg-press-charcoalframe-blackuph_1000x1000_5c4d5373-804c-4c7c-9f66-9abcfbde43b8.jpg?v=1748945307&width=500" alt="Product 3">
-      <h4>Hammer Strength Plate-Loaded Linear Leg Press</h4>
-      <p class="price">$7,658.00</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <span>(36)</span></div>
-    </div>
-
-    <!-- Product 4 -->
-    <div class="product-card">
-      <img src="https://shop.lifefitness.com/cdn/shop/products/G2-HomeGym-L.jpg?v=1748945356&width=500" alt="Product 4">
-      <h4>Life Fitness G2 Home Gym</h4>
-      <p class="price">$1,939.00</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <span>(150)</span></div>
-    </div>
- </div>
-<div class="build-btn">
-   <a href="strength.html">VIEW MORE</a>
-</div>
-</section>
-
-<!-- section nine -->
-<section class="category-section">
-  <div class="category-card">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/SLWoman-exerciser-integrity-SL-Console-close-crop-1000X1000.jpg?v=1695226916&width=900" alt="Treadmills">
-    <h3>Treadmills</h3>
-  </div>
-
-  <div class="category-card">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/club-series-plus-elliptical-exerciser-1000x1000.jpg?v=1748945426&width=900" alt="Ellipticals">
-    <h3>Ellipticals</h3>
-  </div>
-
-  <div class="category-card">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/cable-machines-1000x1000.jpg?v=1695238775&width=900" alt="Cable Machines">
-    <h3>Cable Machines</h3>
-  </div>
-
-  <div class="category-card">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/strength-3-1000x1000.jpg?v=1695239429&width=400" alt="Strength">
-    <h3>Strength</h3>
-  </div>
-</section>
-
-<!-- section ten -->
-
-<section class="affirm-section">
-  <div class="affirm-left">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/club-series-upright-female-exercising2-1000x1000_2b037479-0106-491c-b9a3-57e4d1f4341b.jpg?v=1695239707&width=1000" alt="Affirm Treadmill">
-  </div>
-  <div class="affirm-right">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/affirm-color-2.png?v=1694546632" alt="Affirm Logo" class="affirm-logo">
-    <p class="small-text">AS LOW AS 0% APR UP TO 12 MONTHS*</p>
-    <h2>BUY NOW, PAY OVER TIME</h2>
-    <p class="desc">
-      Just select Affirm at checkout. We might even want to add a button to get pre-approved.
-      We will have to ask Affirm for their help.
-    </p>
-  </div>
-</section>
-
-<!-- section eleven -->
-<section class="hammer-section">
-  <div class="hammer-left">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/HammerStrength-Logo-WHITE-RGB.png?v=1701291991" alt="">
-    <p class="tagline">BUILDING CHAMPIONS</p>
-    <p class="description">
-      Designed to withstand the most intense workouts, Hammer Strength's rugged performance strength training equipment is the most durable on the market. Hammer Strength offers the tools needed to build champions.
-    </p>
-  </div>
-  <div class="hammer-right">
-    <img src="https://shop.lifefitness.com/cdn/shop/files/strength-1000x1000.jpg?v=1695223622&width=1000" alt="Hammer Strength">
-  </div>
-</section>
-<hr class="white-divider">
-<!-- section twelve -->
-<section class="newsletter-section">
-  <div class="newsletter-box">
-    <h4>JOIN THE LIFE FITNESS CLUB</h4>
-    <p>Join our email list to stay up to date with special offers and promotions! Plus, get free Shipping on your next order.</p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Your e-mail" required>
-      <button type="submit">SUBSCRIBE</button>
-    </form>
-  </div>
-</section>
-
-<!-- section thirteen -->
-<!-- Features Section -->
-<section class="features-section">
-  <div class="feature-box">
-    <i class="fas fa-thumbs-up"></i>
-    <h4>100,000+ FACILITIES</h4>
-    <p>
-      From health clubs and gyms to pro sports teams and top colleges, fitness facilities in 165+ countries feature the strength and cardio equipment of Life Fitness.
-    </p>
-  </div>
-
-  <div class="feature-box">
-    <i class="fas fa-medal"></i>
-    <h4>FITNESS LEADERSHIP</h4>
-    <p>
-      Life Fitness has been a pioneer in fitness equipment, innovating across cardio equipment, connected consoles, digital content and connected strength equipment.
-    </p>
-
-  </div>
-
-<!-- Disclaimer -->
-<div class="features-disclaimer">
-  <p>
-    *Your rate will be 0–30% APR based on credit, and is subject to an eligibility check. Payment options through Affirm are provided by these <br> lending partners: 
-    <a href="https://affirm.com/lenders" target="_blank">affirm.com/lenders</a>. Options depend on your purchase amount, and a down payment may be required.
-  </p>
-</div>
-</section>
-<!-- Go to Top -->
-<!-- Go to Top Button -->
-<a href="#top" class="go-to-top-btn">↑ Go to Top</a>
+            </div> <!-- /.container-fluid -->
 
 
+        </div> <!-- /#page-content-wrapper -->
 
-<!-- Footer -->
- <!-- Footer Section -->
-<footer class="site-footer">
-  <div class="footer-top">
-    <div class="footer-logo">
-      <img src="https://shop.lifefitness.com/cdn/shop/t/133/assets/lifefitness-hammerstrength-logo-blk.svg?v=157973299487578770341750339380" alt="Life Fitness" />
-    </div>
+    </div> <!-- /#wrapper -->
 
-    <div class="footer-columns">
-      <div class="footer-column">
-        <h4>COMPANY LINKS</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Accessibility</a></li>
-          <li><a href="#">CA Transparency Act</a></li>
-          <li><a href="#">CA Proposition 65 WARNING</a></li>
-          <li><a href="#">ISO Certificate</a></li>
-          <li><a href="#">Terms & Conditions of Sale</a></li>
-          <li><a href="#">Join our Email List</a></li>
-          <li><a href="#">Affiliate Program</a></li>
-          <li><a href="#">Financing - Life Fitness</a></li>
-        </ul>
-      </div>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("d-none");
+        });
+    </script>
 
-      <div class="footer-column">
-        <h4>CUSTOMER SERVICE</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Returns & Cancellations</a></li>
-          <li><a href="#">Request Service</a></li>
-          <li><a href="#">Custom Home Gym</a></li>
-          <li><a href="#">Product Registration</a></li>
-          <li><a href="#">Referrals</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>SITE LINKS</h4>
-        <ul>
-          <li><a href="#">Search</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Commercial Site</a></li>
-          <li><a href="#">Military & First Responder Discount</a></li>
-          <li><a href="#">Dealer Application</a></li>
-          <li><a href="#">Find a Store</a></li>
-          <li><a href="#">Cardio</a></li>
-          <li><a href="#">Strength</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Outlet</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>CONNECT</h4>
-        <p>800-527-6063 (Sales)<br>800-527-6065 x2 (Support)</p>
-        <a href="#">More Contact Options</a>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-vimeo-v"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>Life Fitness Shop</p>
-  </div>
-
-<!-- ssy wastapp icon jo fixed hota h -->
- <img class="whats"  src="https://favouritehub.com/wp-content/uploads/2021/01/Whatsapp-Chat-Icon-1.png" alt="">
-</footer>
-</style>
 </body>
+
 </html>
